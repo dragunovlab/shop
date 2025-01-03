@@ -1,0 +1,15 @@
+.header {
+  &__container {
+    display: flex;
+    margin: 32px;
+    justify-content: center;
+  }
+
+  &__header-item {
+    margin-right: 48px;
+    
+    &:last-child {
+        margin-right: 0;
+    }
+  }
+}
