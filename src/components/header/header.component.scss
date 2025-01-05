@@ -1,15 +1,36 @@
 .header {
   &__container {
     display: flex;
-    margin: 32px;
-    justify-content: center;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 44px;
+    background-color: #484283;
+    color: #fff;
+  }
+
+  &__logo {
+     margin-right: 200px;
   }
 
   &__header-item {
-    margin-right: 48px;
+    margin-right: 40px;
     
     &:last-child {
         margin-right: 0;
     }
   }
+
+}
+
+.line {
+  width: 1180px;
+  height: 1px;
+  background-color: #fff;
+}
+
+.banner {
+  height: 528px;
+  background-color: #484283;
 }
