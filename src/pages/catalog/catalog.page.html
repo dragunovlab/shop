@@ -1,23 +1,21 @@
 <div class="catalog">
     <h2 class="catalog__title">Каталог</h2>
     <div class="catalog__wrapper">
-       
+        <ng-container *ngIf="list$ | async as products">
+            <div class="catalog__card" *ngFor="let item of products">
+                <div class="catalog__card-title">
+                    {{ item.title }}
+                </div>
+                <div class="catalog__card-title">
+                    <img class="catalog__card-image" [src]="item.images[0]" >
+                </div>
+                <!-- <div class="catalog__card-title">
+                    {{  }}
+                </div>
+                <div class="catalog__card-title">
+                    {{  }}
+                </div> -->
+            </div>
+        </ng-container>
     </div>
 </div>
-
-<!-- <ng-container *ngIf="list$ | async as products">
-    <div class="catalog__card" *ngFor="let item of products">
-        <div class="catalog__card-title">
-            {{ item.title }}
-        </div>
-        <div class="catalog__card-title">
-            {{ item.pt }}
-        </div>
-        <div class="catalog__card-title">
-            {{  }}
-        </div>
-        <div class="catalog__card-title">
-            {{  }}
-        </div>
-    </div>
-</ng-container> -->
