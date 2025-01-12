@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { ProductRequestService } from '../common/services/product-request.service';
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -14,3 +13,7 @@ import { ProductRequestService } from '../common/services/product-request.servic
 export class AppComponent {
  
 }
+
+// ДЗ!
+// 1) доделать хедер
+// 2) сделать детальную страницу карточки товара
