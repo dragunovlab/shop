@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { LayoutPage } from '../pages/layout/layout.page';
 import { CatalogPage } from '../pages/catalog/catalog.page';
+import { ProductDetailngComponent } from '../components/product-detailng/product-detailng.component';
 
 export const routes: Routes = [
     {
@@ -15,6 +16,10 @@ export const routes: Routes = [
             {
                 path: 'catalog',
                 component: CatalogPage
+            },
+            {
+                path: 'products/:id',
+                component: ProductDetailngComponent
             }
         ]
     }

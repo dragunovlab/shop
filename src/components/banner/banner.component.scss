@@ -1,10 +1,63 @@
 .banner {
+    margin-left: 32px;
+    margin-right: 32px;
+    height: 400px;
     background-color: #484283;
     color: #fff;
+    text-align: center;
 }
 
 .banner__title {
-     
+
+    margin-top: 32px;
 }
 
- 
+
+.banner__description {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.banner__btn {
+    margin-top: 40px;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background: var(--primary-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #00e1ff, #01ff16);
+
+    /* Animation effect for hover */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.banner__btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: var(--hover-color);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.banner__btn:hover:before {
+    transform: translateX(0);
+}
+
+.banner__btn:active {
+    background: var(--active-color);
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
