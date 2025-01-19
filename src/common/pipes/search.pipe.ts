@@ -1,17 +1,17 @@
 import { Pipe, PipeTransform } from "@angular/core";
-import { IProduct } from "../interfaces/product.interface";
 
 @Pipe({
-    name: 'search',
+    name: 'searchPipe',
     standalone: true
 })
 export class SearchPipe implements PipeTransform {
-    
-    public transform(list: IProduct[], search: string): IProduct[] {
-        if (!search) {
-            return list;
-        }
 
-        return list.filter(i => i.title.toLowerCase().includes(search.toLowerCase()));
+    /**
+      * трансформ
+      * @param list список
+      * @param keyGetter получение ключа у айтема списка, необязателен
+      */
+    public transform<T>(list: T[], value: string, keyGetter: (value: T) => string = (value: T) => String(value)): T[] {
+        return list.filter(i => keyGetter(i).toLowerCase().includes(value.toLowerCase()));
     }
 }

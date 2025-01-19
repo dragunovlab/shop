@@ -1,16 +1,16 @@
 <div class="catalog">
     <h2 class="catalog__title">Каталог</h2>
     <div class="catalog__search-wrapper">
-        <input class="catalog__search" type="text" [formControl]="search" placeholder="Поиск">
+        <input class="catalog__search" type="text" [(ngModel)]="title" placeholder="Поиск">
     </div>
     <div class="catalog__wrapper">
         <ng-container *ngIf="list$ | async as products">
-            <div class="catalog__card" *ngFor="let item of products">
+            <div class="catalog__card" *ngFor="let item of products | searchPipe : title : keyGetter" (click)="navigateToDetail(item.id)">
                 <div class="catalog__card-title">
                     {{ item.title }}
                 </div>
                 <div class="catalog__card-title">
-                    <img class="catalog__card-image" [src]="item.images[0]" >
+                    <img class="catalog__card-image" [src]="item.images[0]">
                 </div>
             </div>
         </ng-container>

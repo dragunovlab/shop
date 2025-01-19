@@ -13,4 +13,8 @@ export class ProductRequestService {
         return this.httpClient.get<IProduct[]>(this._url);
     }
 
+    public getProductById(id: string): Observable<IProduct> {
+        return this.httpClient.get<IProduct>(`${this._url}/${id}`);
+    }
+
 }
