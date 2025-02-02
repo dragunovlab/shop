@@ -3,18 +3,18 @@ import { INavigation } from "../interfaces/navigation.interface";
 export const headerNavigationList: INavigation[] = [
     {
         title: 'Каталог',
-        route: ''
+        route: 'catalog'
     },
     {
         title: 'О нас',
-        route: ''
+        route: 'about'
     },
     {
         title: 'Контакты',
-        route: ''
+        route: 'contacts'
     },
     {
         title: 'Корзина',
-        route: ''
+        route: 'cart'
     }
 ];

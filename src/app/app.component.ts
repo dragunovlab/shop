@@ -11,11 +11,15 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
- 
+
+
+  constructor() {
+    
+  }
+
 }
 
 // ДЗ!
 // 1) сверстать карточку товара
-// 2) кнопка назад
-// 3) разобраться как работает searchPipe (бонус)
-// 4) доделать верстку баннера
+// 2) разобраться как работает searchPipe (бонус)
+// 3) доделать верстку баннера

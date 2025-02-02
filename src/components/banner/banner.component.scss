@@ -1,17 +1,9 @@
 .banner {
-    margin-left: 32px;
-    margin-right: 32px;
-    height: 400px;
     background-color: #484283;
     color: #fff;
     text-align: center;
+    padding: 24px;
 }
-
-.banner__title {
-
-    margin-top: 32px;
-}
-
 
 .banner__description {
     margin-top: 40px;
@@ -32,8 +24,7 @@
     box-shadow: 0 4px 6px var(--shadow-color);
     transition: all 0.3s ease;
     background: linear-gradient(135deg, #00e1ff, #01ff16);
-
-    /* Animation effect for hover */
+    
     position: relative;
     overflow: hidden;
     z-index: 1;

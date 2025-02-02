@@ -26,6 +26,10 @@ export class ProductDetailngPage implements OnInit {
   }
 
   public ngOnInit(): void {
-      this.product$ = this.productRequestService.getProductById(this.activatedRoute.snapshot.params['id'])
+    this.product$ = this.productRequestService.getProductById(this.activatedRoute.snapshot.params['id'])
+  }
+
+  public goBack(): void {
+    history.back();
   }
 }

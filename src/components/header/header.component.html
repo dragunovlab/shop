@@ -1,10 +1,11 @@
 <div class="header__container">
     <div class="header__wrapper">
         <div class="header__wrapper-first">
-            <img class="header__logo" src="../../assets/logo.svg" alt="">
-            <ng-container *ngFor="let item of headerList">
+            <img class="header__logo" src="../../assets/logo.svg">
+            <ng-container *ngFor="let item of headerList; let index = index">
                 <div class="header__header-item">
-                    <span class="header__title">{{ item.title }}</span>
+                    <span class="header__title" [routerLink]="[item.route]" routerLinkActive="is-active">
+                        {{ item.title }}</span>
                 </div>
             </ng-container>
         </div>

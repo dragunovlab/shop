@@ -31,6 +31,12 @@
       margin-right: 0;
     }
   }
+
+  &__title {
+    &.is-active {
+      color: greenyellow;
+    }
+  }
 }
 
 .banner {
