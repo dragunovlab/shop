@@ -7,6 +7,7 @@ import { ProductRequestService } from '../../common/services/product-request.ser
 import { SearchPipe } from '../../common/pipes/search.pipe';
 import { Router } from '@angular/router';
 import { ProductCardComponent } from '../product-card/product-card.component';
+import { ProductSearchService } from '../../common/services/product-search.service';
 
 @Component({
     standalone: true,
@@ -18,7 +19,7 @@ import { ProductCardComponent } from '../product-card/product-card.component';
     ]
 })
 export class CatalogPage implements OnInit {
-
+    
     protected list$!: Observable<IProduct[]>
     protected readonly search: FormControl = new FormControl('');
 
@@ -26,7 +27,8 @@ export class CatalogPage implements OnInit {
 
     constructor(
         @Inject(ProductRequestService) protected readonly productRequestService: ProductRequestService,
-        @Inject(Router) protected readonly router: Router
+        @Inject(Router) protected readonly router: Router,
+        @Inject(ProductSearchService) protected readonly productSearchService: ProductSearchService
     ) {
     }
 

@@ -5,6 +5,7 @@ import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { BannerComponent } from '../../components/banner/banner.component';
 import { ProductRequestService } from '../../common/services/product-request.service';
+import { ProductSearchService } from '../../common/services/product-search.service';
 
 
 
@@ -15,6 +16,7 @@ import { ProductRequestService } from '../../common/services/product-request.ser
     templateUrl: './layout.page.html',
     providers: [
         ProductRequestService,
+        ProductSearchService
     ],
     styleUrl: './layout.page.scss'
 })

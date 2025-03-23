@@ -1,18 +1,20 @@
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms'
+import { Component, inject } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProductSearchService } from '../../common/services/product-search.service';
 
 @Component({
-  selector: 'app-search',
-  standalone: true,
-      imports: [FormsModule],
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss']
+    selector: 'app-search',
+    standalone: true,
+    imports: [FormsModule, ReactiveFormsModule],
+    templateUrl: './search.component.html',
+    styleUrls: ['./search.component.scss']
 })
 export class SearchComponent {
-    searchQuery: string = '';  
-    searchActive: boolean = false;
+     
+    protected readonly productSearchService: ProductSearchService = inject(ProductSearchService);
+    public searchActive: boolean = false;
 
-    toggleSearch() {
+    public toggleSearch() {
         this.searchActive = !this.searchActive;
     }
 }
