@@ -32,4 +32,9 @@ export class ProductDetailngPage implements OnInit {
   public goBack(): void {
     history.back();
   }
+
+  public clickBuy(): void {
+    history.back();
+  }
+
 }

@@ -1,0 +1,21 @@
+<!-- search -->
+<div class="search-menu">
+    <div class="search-container" [class.search-active]="searchActive">
+      <input
+        type="text"
+        class="search-input"
+        placeholder="Поиск..."
+        [(ngModel)]="searchQuery"
+      />
+      <a
+        href="#"
+        class="search-icon"
+        (click)="toggleSearch(); $event.preventDefault()"
+      >
+        <i class="fas fa-search"></i>
+      </a>
+    </div>
+    <a href="#"><i class="fas fa-bars"></i></a>
+  </div>
+  <!-- search -->
+  

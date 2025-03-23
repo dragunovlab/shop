@@ -4,14 +4,19 @@
         <input class="catalog__search" type="text" [(ngModel)]="title" placeholder="Поиск">
     </div>
     <div class="catalog__wrapper">
+      
         <ng-container *ngIf="list$ | async as products">
             <div class="catalog__card" *ngFor="let item of products | searchPipe : title : keyGetter" (click)="navigateToDetail(item.id)">
-                <div class="catalog__card-title">
+                
+                
+                <app-product-card  [product]="item" (addCartEvent)="addCart($event)" ></app-product-card>
+                
+                <!-- <div class="catalog__card-title">
                     {{ item.title }}
                 </div>
                 <div class="catalog__card-title">
                     <img class="catalog__card-image" [src]="item.images[0]">
-                </div>
+                </div> -->
             </div>
         </ng-container>
     </div>

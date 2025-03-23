@@ -6,10 +6,11 @@ import { IProduct } from '../../common/interfaces/product.interface';
 import { ProductRequestService } from '../../common/services/product-request.service';
 import { SearchPipe } from '../../common/pipes/search.pipe';
 import { Router } from '@angular/router';
+import { ProductCardComponent } from '../product-card/product-card.component';
 
 @Component({
     standalone: true,
-    imports: [CommonModule, FormsModule, SearchPipe, ReactiveFormsModule],
+    imports: [CommonModule, FormsModule, SearchPipe, ReactiveFormsModule, ProductCardComponent],
     templateUrl: './catalog.page.html',
     styleUrl: './catalog.page.scss',
     providers: [
@@ -53,5 +54,9 @@ export class CatalogPage implements OnInit {
 
     public keyGetter(product: IProduct): string {
         return product.title;
+    }
+
+    public addCart(product: IProduct): void {
+        console.log(product)
     }
 }

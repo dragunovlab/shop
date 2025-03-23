@@ -1,13 +1,27 @@
-<div class="header__container">
-    <div class="header__wrapper">
-        <div class="header__wrapper-first">
-            <img class="header__logo" src="../../assets/logo.svg">
-            <ng-container *ngFor="let item of headerList; let index = index">
-                <div class="header__header-item">
-                    <span class="header__title" [routerLink]="[item.route]" routerLinkActive="is-active">
-                        {{ item.title }}</span>
-                </div>
-            </ng-container>
-        </div>
+<header class="header">
+  <div class="logo">
+    <h1>SNEAKER <span>FLARE</span></h1>
+  </div>
+  <div class="content">
+    <div class="social-media-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
     </div>
-</div>
+    <nav class="navigation">
+      <ul>
+        <ng-container>
+          <li *ngFor="let item of headerList; let i = index">
+            <a [routerLink]="[item.route]" routerLinkActive="is-active">
+              {{ item.title }}
+            </a>
+          </li>
+        </ng-container>
+      </ul>
+    </nav>
+    <!-- Компонент поиска -->
+    <app-search></app-search>
+    <!-- Компонент поиска -->
+  </div>
+</header>

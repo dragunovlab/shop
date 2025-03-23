@@ -3,7 +3,9 @@
     padding: 32px;
 
     &__wrapper {
-        position: absolute;
+        width: 1240px;
+        margin: 0 auto;
+   
         display: grid;
         grid-template-columns: auto auto auto;
     }
@@ -24,20 +26,11 @@
     }
 
     &__card {
-        box-shadow: 2px 2px 4px slategrey;
-        padding: 16px;
-        border: 1px solid;
-        border-radius: 8px;
-        border-color: grey;
+        max-width: 350px;
+        margin-right: 16px;
         margin-bottom: 16px;
         cursor: pointer;
         width: 50%;
-
-        &:hover {
-            background-color: antiquewhite;
-            opacity: 0.5;
-            transition: 0.5s;
-        }
     }
 
     &__card-title {

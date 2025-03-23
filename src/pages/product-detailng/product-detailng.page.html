@@ -1,8 +1,13 @@
+<div class="container">
 <div *ngIf="product$ | async as product">
-    <div (click)="goBack()">
+    <button class="back-button" (click)="goBack()">
         Назад
+    </button>
+    <div class="product-card">
+        <h3 class="product-title">{{ product.title }}</h3>
+        <p class="product-price">{{ product.price }} ₽</p>
+        <img [src]="product.images" class="product-image"/>
+        <button class="buy-button">Купить</button>
     </div>
-    <div>
-        {{ product.title }}
-    </div>
+</div>
 </div>

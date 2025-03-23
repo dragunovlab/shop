@@ -6,6 +6,8 @@ import { FooterComponent } from '../../components/footer/footer.component';
 import { BannerComponent } from '../../components/banner/banner.component';
 import { ProductRequestService } from '../../common/services/product-request.service';
 
+
+
 @Component({
     selector: 'app-layout',
     standalone: true,
